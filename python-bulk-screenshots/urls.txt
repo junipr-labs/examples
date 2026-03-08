@@ -1,0 +1,8 @@
+# Sample URLs for bulk screenshot capture
+# One URL per line. Lines starting with # are ignored.
+
+https://example.com
+https://github.com
+https://news.ycombinator.com
+https://httpbin.org
+https://jsonplaceholder.typicode.com
