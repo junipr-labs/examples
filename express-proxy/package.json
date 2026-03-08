@@ -1,0 +1,13 @@
+{
+  "name": "junipr-screenshot-proxy",
+  "version": "1.0.0",
+  "description": "Screenshot proxy microservice using the Junipr API",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
