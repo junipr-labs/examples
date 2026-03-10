@@ -74,6 +74,17 @@ app.get("/screenshot", rateLimit, async (req, res) => {
     return res.status(400).json({ error: "Missing required 'url' query parameter." });
   }
 
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(url);
+  } catch {
+    return res.status(400).json({ error: "Invalid URL format." });
+  }
+
+  if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+    return res.status(400).json({ error: "Only http and https URLs are allowed." });
+  }
+
   try {
     const response = await fetch(`${API_BASE}/v1/screenshot`, {
       method: "POST",
